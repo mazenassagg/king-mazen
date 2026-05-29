@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # coding=utf-8
 # *******************************************************************
-# *** MikrotikSploit ***
+# *** Mikrotik.king ***
 # * Version:
 #   v0.1
 # * Date:
@@ -9,7 +9,7 @@
 # * Facebook:
 #   https://www.facebook.com/profile.php?id=100005445123759
 # * Author:
-#   sadam alsharabi
+#   mazen alkhaledi
 # *******************************************************************
 
 
