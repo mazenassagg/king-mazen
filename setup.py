@@ -7,9 +7,9 @@
 # * Date:
 #   28 - 08 - 2019 { Wed 28 Aug 2019 }
 # * Facebook:
-#   https://www.facebook.com/profile.php?id=100005445123759
+#   
 # * Author:
-#   sadam alsharabi
+#   s
 # *******************************************************************
 
 from setuptools import setup, find_packages
@@ -24,9 +24,9 @@ setup(
                      " Mikrotik network vulnerabilities Loophole pull"
                      " numbers of network login cards ... Loophole know the username and password of the admin panel "
                      "of the network Mikrotik ... A special section of the DoS system",
-    author='Hathem Ahmed',
+    author='Mazen alkhalidi',
     author_email='hathem63636@gmail.com',
-    url='https://github.com/HathemAhmed/MikrotikSploit',
+    url='https://github.com/mazenassagg/king-mazen.git',
     keywords=['Mikrotik', 'checker', 'web scanner',
               'Wifi scanner', 'MikrotikSploit', 'Exploiting'],
     install_requires=['colorama', 'requests', 'threading', 'struct', 'socket', 'binascii'],
