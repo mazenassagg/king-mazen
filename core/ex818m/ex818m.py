@@ -107,10 +107,10 @@ import threading
 FIND = 0
 lock = threading.Lock()
 
-def _CHECK_AND_INDEX(_A, HOST, DATA, PROCESS_SIZE, _S, PASSOUR):
+def _CHECK_AND_INDEX(_A, HOST, DATA, PROCESS_SIZE, _S, PASSWIRD):
     global FIND
     # الكود الخاص بك تماماً بدون أي تغيير في الأسماء أو المنطق
-    if int(DATA.headers['Content-Length']) < PROCESS_SIZE and int(DATA.status_code) == 200:
+    if int(DATA.headers['Content-Length']) < PROCESS_SIZE and int(PASSWIRD.status_code) == 200:
         if  PROCESS_SIZE - int(DATA.headers['Content-Length']) > 3000:
             _S.get(url=f"http://{HOST}/")
             _S.delete(url=f"http://{HOST}/")                    
@@ -121,7 +121,7 @@ def _CHECK_AND_INDEX(_A, HOST, DATA, PROCESS_SIZE, _S, PASSOUR):
             with lock:
                 FIND += 1
 
-    _INDEX(_A, DATA, king, FIND)
+    _INDEX(_A, DATA, PASSWIRD, FIND)
 
 
 def _PROCESS_DATA(HOST, MINNUM, MAXNUM):
@@ -134,7 +134,7 @@ def _PROCESS_DATA(HOST, MINNUM, MAXNUM):
             # [!] تنويه: هنا يفترض أن كودك الأصلي يقوم بجلب أو تعريف DATA و _S و PROCESS_SIZE و king
             
             # بدلاً من تشغيل الكود مباشرة، نرسله ليعمل كمسار (Thread) منفصل وسريع
-            executor.submit(_CHECK_AND_INDEX, _A, HOST, DATA, PROCESS_SIZE, _S, king)
+            executor.submit(_CHECK_AND_INDEX, _A, HOST, DATA, PROCESS_SIZE, _S, PASSWIRD)
             
             _A += 1
 
